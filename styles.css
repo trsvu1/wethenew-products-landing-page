@@ -1,0 +1,221 @@
+/* ===== GLOBAL STYLES ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  justify-content: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: rgb(255, 255, 255);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color:rgb(231, 154, 0);
+}
+
+#header-img {
+  height: 50px;
+  width: auto;
+} 
+
+#hero-title {
+  font-size: 40px;
+}
+
+#hero-container {
+  position: relative;
+  padding: 270px;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+  width: 1200px;
+  margin-bottom: 30px;
+}
+
+#hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('img/Wethenew_Wall_Sneaker.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(6px);
+  z-index: -1;
+}
+
+#email {
+  width: 300px;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#email:focus {
+  border-color: grey;
+}
+
+#submit {
+  display: inline-block;
+  background: grey;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#submit:hover {
+  background: rgb(231, 154, 0);
+}
+
+.wethenew-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.wethenew-link:hover,
+.wethenew-link:active {
+  color: rgb(231, 154, 0);
+}
+
+.sneaker-title, .streetwear-title, .about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-top: 3px solid grey;
+  border-bottom: 3px solid grey;
+  padding: 20px 0 30px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.sneakers-grid, .streetwears-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 0 90px 0;
+}
+
+.sneaker, .streetwear {
+  flex-basis: calc(30% - 1.5rem);
+  min-width: 100px;
+}
+
+.buy-button a {
+  display: inline-block;
+  background: grey;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.buy-button a:hover {
+  background: rgb(231, 154, 0);
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  margin: 0 0 15px 0;
+  color: #ccc;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: rgb(231, 154, 0);
+}
+
+.copyright-message {
+  padding-top: 20px;
+}
+
+@media (max-width: 600px) {
+  #nav-bar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+  
+  .sneakers-grid, .streetwears-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
